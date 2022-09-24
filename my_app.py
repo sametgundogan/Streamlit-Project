@@ -50,7 +50,7 @@ st.table(input_df)
 
 
 #Read in saved model
-samet_model = pickle.load(open("final_scout_not_dummy", "rb"))
+samet_model = pickle.load(open("final_scout_not_dummy.pkl", "rb"))
 
 #Apply model to make predictions
 if st.button('predict'):
