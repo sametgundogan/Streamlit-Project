@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+import pickle
 
 
 # Title
@@ -20,8 +21,6 @@ features = ["make_model", "hp_kW", "km","age", "Gearing_Type", "Gears","price"]
 df = df[features]
 
 
-import pickle
-pickle.dump(final_scout_not_dummy, open('final_scout_not_dummy', 'wb'))
 
 # Creating side bar 
 st.sidebar.title("Select the features you want for price estimation")
