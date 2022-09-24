@@ -21,7 +21,7 @@ df = df[features]
 
 
 import pickle
-pickle.dump(pipe_model, open('final_scout_not_dummy', 'wb'))
+pickle.dump(final_scout_not_dummy, open('final_scout_not_dummy', 'wb'))
 
 # Creating side bar 
 st.sidebar.title("Select the features you want for price estimation")
