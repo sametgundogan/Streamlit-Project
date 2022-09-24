@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-from sklearn.linear_model import Lasso
 from sklearn.compose import make_column_transformer
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
 from sklearn.pipeline import Pipeline
+from sklearn.linear_model import Lasso
+
 
 # Title
 st.title("Car Price Prediction")
