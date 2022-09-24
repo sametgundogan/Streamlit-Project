@@ -26,6 +26,10 @@ df = df[features]
 st.sidebar.title("Select the features you want for price estimation")
 
 
+#Read in saved model
+samet_model = pickle.load(open("final_scout_not_dummy", "rb"))
+
+
 def user_input_features() :
     make_model = st.sidebar.selectbox("make_model", ("Audi A3","Audi A1","Opel Insignia", "Opel Astra", "Opel Corsa", "Renault Clio", "Renault Espace", "Renault Duster"))
     Gearing_Type = st.sidebar.selectbox("Gearing_Type", ("Manual","Automatic", "Semi-automatic"))
@@ -48,9 +52,6 @@ input_df = user_input_features()
 st.success("Features of Selected Car")
 st.table(input_df)
 
-
-#Read in saved model
-samet_model = pickle.load(open("final_scout_not_dummy.pkl", "rb"))
 
 #Apply model to make predictions
 if st.button('predict'):
