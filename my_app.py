@@ -55,4 +55,4 @@ st.table(input_df)
 
 #Apply model to make predictions
 if st.button('predict'):
-    st.success(f'Analyze Predict:{samet_model.predict(d)[0].round(2)}')
+    st.success(f'Analyze Predict:{int(samet_model.predict(input_df))}')
