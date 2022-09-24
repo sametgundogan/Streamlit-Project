@@ -25,7 +25,6 @@ df = df[features]
 # Creating side bar 
 st.sidebar.title("Select the features you want for price estimation")
 
-features = ["make_model", "hp_kW", "km","age", "Gearing_Type", "Gears","price"]
 
 def user_input_features() :
     make_model = st.sidebar.selectbox("make_model", ("Audi A3","Audi A1","Opel Insignia", "Opel Astra", "Opel Corsa", "Renault Clio", "Renault Espace", "Renault Duster"))
